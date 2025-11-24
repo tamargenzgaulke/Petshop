@@ -1,59 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>PETISCAO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Petiscão - Início</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Projeto CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <header>
-            <h1>PETISCÃO Petshop</h1>
-            <div>Cuidados e produtos para o seu melhor amigo!</div>
-            <div id="banner">
-              <img src="Dog.png" width="15%" alt="PETISCÃO Petshop">
-            </div>
-            <nav>
-                <a href="produtos.html">Produtos</a> |
-                <a href="racoes.html">Rações</a> |
-                <a href="acessorios.html">Acessórios</a> |
-                <a href="servicos.html">Serviços</a> |
-                <a href="#contato">Contato</a>
-            </nav>
-        </header>
+
+  <!-- Cabeçalho / Barra de navegação -->
+  <header class="site-header bg-light">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <div class="d-flex align-items-center">
+        <img src="Dog.png" alt="Logomarca Petiscão — um cão feliz" class="logo me-3" width="64">
+        <div>
+          <h1 class="h3 mb-0">Petiscão</h1>
+          <div class="small text-muted">Cuidados e produtos para o seu melhor amigo</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="racoes.html">Rações</a></li>
+          <li class="nav-item"><a class="nav-link" href="acessorios.html">Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        </ul>
+      </nav>
     </div>
-    <h2>Bem-vindo ao PETISCÃO Petshop!</h2>
+  </header>
+
+  <main class="container my-4">
+
+    <!-- Carrossel -->
+    <section aria-labelledby="carousel-title">
+      <h2 id="carousel-title" class="h5 mb-3">Destaques</h2>
+
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="shampoo.png" class="d-block w-25 carousel-img" alt="Produtos de higiene">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Produtos de Higiene</h3>
+              <p>Tapetes, fraldas e shampoos selecionados.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="racao_gato.png" class="d-block w-25" alt="Rações premium">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Rações Premium</h3>
+              <p>Nutrição balanceada para todas as idades.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="roupa.png" class="d-block w-25" alt="Acessórios para pets">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Acessórios</h3>
+              <p>Coleiras, camas e brinquedos para conforto e diversão.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Apresentação / Acesso rápido às categorias -->
+    <section class="mt-5" aria-labelledby="categorias-title">
+            <h2>Bem-vindo ao PETISCÃO Petshop!</h2>
     <p>Seu pet merece o melhor cuidado e atenção. <blockquote> Aqui no PETISCÃO, oferecemos uma variedade de <strong> produtos  </strong> e <strong> serviços </strong> para garantir a felicidade e o bem-estar do seu amigo de quatro patas. </blockquote> </p>
     <p>Explore nossas categorias abaixo para encontrar tudo o que você precisa para cuidar do seu pet:</p>
-    <section id="produtos de higiene e limpeza"></section>
-        <h3><a href="produtos.html">Produtos de Higiene e Limpeza</a></h3>
-        <img src="produtos_inicial.png" alt="Produtos de Higiene e Limpeza" width="150">
+      <h2 id="categorias-title" class="h5">Categorias</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3 text-center">
+          <a href="produtos.html">
+            <img src="produtos_inicial.png" alt="Produtos de higiene e limpeza" class="img-fluid rounded" />
+            <div class="mt-2">Produtos de Higiene & Limpeza</div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <a href="racoes.html">
+            <img src="racoes_inicial.png" alt="Rações" class="img-fluid rounded" />
+            <div class="mt-2">Rações</div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <a href="acessorios.html">
+            <img src="acessorios_inicial.png" alt="Acessórios" class="img-fluid rounded" />
+            <div class="mt-2">Acessórios</div>
+          </a>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <a href="servicos.html">
+            <img src="servicos_inicial.png" alt="Serviços" class="img-fluid rounded" />
+            <div class="mt-2">Serviços</div>
+          </a>
+        </div>
+      </div>
     </section>
-    <section id="racoes">
-        <h3><a href="racoes.html">Rações</a></h3>
-        <img src="racoes_inicial.png" alt="Rações para Pets" width="150">
+
+    <!-- Chamadas para ação: cadastro e agendamento -->
+    <section class="mt-5" aria-labelledby="cta-title">
+      <h2 id="cta-title" class="h5">Cadastro e Agendamento</h2>
+      <p>Cadastre-se e agende o banho e tosa do seu pet.</p>
+
+      <div class="d-flex gap-3">
+        <a class="btn btn-primary" href="cadastro.html">Fazer Cadastro</a>
+        <!-- Abre modal de agendamento -->
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agendamentoModal">Agendar Tele-busca / Entrega</button>
+      </div>
     </section>
-    <section id="acessórios">
-        <h3><a href="acessorios.html">Acessórios</a></h3>
-        <img src="acessorios_inicial.png" alt="Acessórios para Pets" width="150">
-    </section>
-    <section id="servicos">
-        <h3><a href="servicos.html">Serviços</a></h3>
-        <img src="servicos_inicial.png" alt="Serviços para Pets" width="150">
-    </section>
-    <section id="contato">
-        <h3>Contato</h3>
-        <p>Telefone: (51) 1234-5678</p>
-    </section>  
+    </main>
+
+<!-- Modal de Agendamento -->
+<div class="modal fade" id="agendamentoModal" tabindex="-1" aria-labelledby="agendamentoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="formAgendamento" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="agendamentoModalLabel">Agendamento — Banho & Tosa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <!-- Campo cliente (nome) -->
+          <div class="mb-2">
+            <label for="agNome" class="form-label">Nome do cliente</label>
+            <input type="text" id="agNome" class="form-control" placeholder="Nome completo" required>
+            <div class="invalid-feedback">Informe seu nome.</div>
+          </div>
+
+          <!-- Tipo de serviço -->
+          <div class="mb-3">
+            <label class="form-label">Serviço</label>
+            <select id="agServico" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Banho e Tosa sem Tele-busca">Banho e Tosa</option>
+            </select>
+            <div class="invalid-feedback">Escolha uma opção.</div>
+          </div>
+
+          <!-- Modalidade -->
+          <div class="mb-2">
+            <label class="form-label">Modalidade</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="modalidade" id="modPresencial" value="presencial" required>
+                <label class="form-check-label" for="modPresencial">Entrega no local</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="modalidade" id="modTele" value="tele-busca" required>
+                <label class="form-check-label" for="modTele">Tele-busca</label>
+              </div>
+            </div>
+            <div class="invalid-feedback d-block" id="modalidadeFeedback">Escolha a modalidade.</div>
+          </div>
+
+          <!-- Data e hora -->
+          <div class="mb-2">
+            <label for="agData" class="form-label">Data</label>
+            <input type="date" id="agData" class="form-control" required>
+            <div class="invalid-feedback">Escolha uma data.</div>
+          </div>
+
+          <div class="mb-2">
+            <label for="agHora" class="form-label">Horário</label>
+            <input type="time" id="agHora" class="form-control" required>
+            <div class="invalid-feedback">Escolha um horário.</div>
+          </div>
+
+          <!-- Forma de Pagamento -->
+          <div class="mb-3">
+            <label class="form-label">Forma de Pagamento</label>
+            <select id="agPagamento" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Pix">Pix</option>
+              <option value="Cartão de crédito">Cartão de crédito</option>
+              <option value="Cartão de débito">Cartão de débito</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Transferência bancária">Transferência bancária</option>
+            </select>
+            <div class="invalid-feedback">Escolha a forma de pagamento.</div>
+          </div>
+
+          <!-- Observações -->
+          <div class="mb-2">
+            <label for="agObserv" class="form-label">Observações</label>
+            <textarea id="agObserv" class="form-control" rows="2" placeholder="Ex.: porte do pet, acesso, etc."></textarea>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Rodapé -->
+  <footer class="site-footer bg-light mt-5 py-3">
+    <div class="container text-center small">
+      <p class="mb-1">© 2025 Petiscão — Desenvolvido por Tamar Genz Gaulke</p>
+      <p class="mb-0">Contato: (51) 1234-5678 • petiscao@pet.com</p>
+      <nav>
+        <a href="produtos.html">Produtos</a> |
+        <a href="racoes.html">Rações</a> |
+        <a href="acessorios.html">Acessórios</a> |
+        <a href="servicos.html">Serviços</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Seu script -->
+  <script src="script.js"></script>
+
 </body>
-<footer>
-    <p>&copy; 2025 PETISCAO Petshop. Todos os direitos reservados.</p>
-    <p>Contato: (51) 1234-5678 | email:petiscao@pet.com</p>
-         <nav>
-                <a href="produtos.html">Produtos</a> |
-                <a href="racoes.html">Rações</a> |
-                <a href="acessorios.html">Acessórios</a> |
-                <a href="servicos.html">Serviços</a> |
-                <a href="#contato">Contato</a>
-            </nav>
-</footer>
 </html>

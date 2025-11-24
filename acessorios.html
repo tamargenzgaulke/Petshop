@@ -1,51 +1,85 @@
-
-    <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>PETISCAO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Petiscão — Acessórios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <header>
-            <h1>PETISCÃO <a href="petshop.html">Petshop</a> </h1>
-            <div>Cuidados e produtos para o seu melhor amigo!</div>
-            <div id="banner">
-              <img src="Dog.png" width="15%" alt="PETISCÃO Petshop">
-            </div>
-            <nav>
+  <header class="site-header bg-light">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <div class="d-flex align-items-center">
+        <img src="Dog.png" alt="Logomarca Petiscão" width="56" height="56" class="me-2">
+        <div>
+          <h1 class="h4 mb-0">Petiscão</h1>
+          <div class="small text-muted">Acessórios</div>
+        </div>
+      </div>
+<!-- Barra de navegação -->
+      <nav aria-label="Navegação">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="racoes.html">Rações</a></li>
+          <li class="nav-item"><a class="nav-link active" href="acessorios.html">Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<!-- opções de compra em acessórios -->
+  <main class="container my-4">
+    <h2 class="h5">Acessórios</h2>
+
+    <div class="row g-3 mt-2">
+      <article class="col-12 col-md-4">
+        <div class="card">
+          <img src="roupa.png" class="card-img-top" alt="Roupa para pets" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Roupa para Pets</h3>
+            <p class="card-text">Várias cores e tamanhos.</p>
+            <p class="fw-bold">R$ 49,90</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-12 col-md-4">
+        <div class="card">
+          <img src="brinquedo.png" class="card-img-top" alt="Brinquedo para pets" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Brinquedo Interativo</h3>
+            <p class="card-text">Estimula o pet e é resistente.</p>
+            <p class="fw-bold">R$ 19,90</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="col-12 col-md-4">
+        <div class="card">
+          <img src="cama.png" class="card-img-top" alt="Cama para pets" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Cama Soft</h3>
+            <p class="card-text">Muito confortável e lavável.</p>
+            <p class="fw-bold">R$ 99,90</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <!-- Rodapé -->
+<footer class="site-footer bg-light mt-5 py-3">
+    <div class="container text-center small">
+      <p class="mb-1">© 2025 Petiscão — Desenvolvido por Tamar Genz Gaulke</p>
+      <p class="mb-0">Contato: (51) 1234-5678 • petiscao@pet.com</p>
+        <nav>
                 <a href="produtos.html">Produtos</a> |
                 <a href="racoes.html">Rações</a> |
                 <a href="acessorios.html">Acessórios</a> |
                 <a href="servicos.html">Serviços</a> |
                 <a href="#contato">Contato</a>
             </nav>
-        </header>
- <section id="acessórios">
-        <h3>Acessórios</h3>
-        <div>
-            <img src="roupa.png" alt="Roupa para Pets" width="150">
-            <p>Roupa para Pets - R$ 49,90</p>
-        </div>
-        <div>
-            <img src="brinquedo.png" alt="Brinquedo para Pets" width="150">
-            <p>Brinquedo para Pets - R$ 19,90</p>
-        </div>
-        <div>
-            <img src="cama.png" alt="Cama para Pets" width="150">
-            <p>Cama para Pets - R$ 99,90</p>
-        </div>
-    </section>
-</body>
-<footer>
-    <p>&copy; 2025 PETISCAO Petshop. Todos os direitos reservados.</p>
-    <p>Contato: (51) 1234-5678 | email:petiscao@pet.com</p>
-         <nav>
-                <a href="produtos.html">Produtos</a> |
-                <a href="racoes.html">Rações</a> |
-                <a href="acessorios.html">Acessórios</a> |
-                <a href="servicos.html">Serviços</a> |
-                <a href="#contato">Contato</a>
-            </nav>
+    </div>
 </footer>
 </html>

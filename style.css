@@ -1,0 +1,50 @@
+
+/* Reset leve */
+* {
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  color: #222;
+  background: #edc2c2;
+}
+
+/* Cabeçalho */
+.site-header {
+  border-bottom: 1px solid #2d0101;
+}
+
+/* Logo */
+.logo {
+  border-radius: 8px;
+}
+
+/* Ajuste de tamanho das imagens do carrossel */
+.carousel-item img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+}
+
+
+/* Cards */
+.card {
+  height: 100%;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #e6e6e6;
+}
+
+/* melhorias responsivas */
+@media (max-width: 576px) {
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+}

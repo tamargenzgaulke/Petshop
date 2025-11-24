@@ -1,50 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>PETISCAO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Petiscão — Serviços</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <header>
-            <h1>PETISCÃO <a href="petshop.html">Petshop</a> </h1>
-            <div>Cuidados e produtos para o seu melhor amigo!</div>
-            <div id="banner">
-              <img src="Dog.png" width="15%" alt="PETISCÃO Petshop">
+  <header class="site-header bg-light">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <div class="d-flex align-items-center">
+        <img src="Dog.png" alt="Logomarca Petiscão" width="56" height="56" class="me-2">
+        <div>
+          <h1 class="h4 mb-0">Petiscão</h1>
+          <div class="small text-muted">Serviços</div>
+        </div>
+      </div>
+<!-- Barra de navegação -->
+
+      <nav aria-label="Navegação">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="racoes.html">Rações</a></li>
+          <li class="nav-item"><a class="nav-link" href="acessorios.html">Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link active" href="servicos.html">Serviços</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<!-- Opções de compra em serviços -->
+  <main class="container my-4">
+    <h2 class="h5">Serviços — Banho & Tosa</h2>
+
+    <div class="row g-3 mt-2">
+      <article class="col-12 col-md-3">
+        <div class="card">
+          <img src="banho.png" class="card-img-top" alt="Banho e tosa sem tele-busca" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Banho e Tosa (sem tele-busca)</h3>
+            <p class="card-text">Serviço completo no petshop: banho, tosa, corte de unhas e escovação.</p>
+            <p class="fw-bold">R$ 79,90</p>
+            <div class="mt-3">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agendamentoModal">Agendar Banho & Tosa</button>
+    </div>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="col-12 col-md-4">
+        <div class="card">
+          <img src="carro.png" class="card-img-top" alt="Veículo para tele-busca" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Banho e Tosa (com tele-busca)</h3>
+            <p class="card-text">Buscamos e devolvemos seu pet em segurança — com agendamento.</p>
+            <p class="fw-bold">R$ 99,90</p>
+            <div class="mt-3">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agendamentoModal">Agendar Tele-busca</button>
             </div>
-            <nav>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+<!-- Rodapé -->
+  <footer class="site-footer bg-light py-3">
+   <div class="container text-center small">
+      <p class="mb-1">© 2025 Petiscão — Desenvolvido por Tamar Genz Gaulke</p>
+      <p class="mb-0">Contato: (51) 1234-5678 • petiscao@pet.com</p>
+        <nav>
                 <a href="produtos.html">Produtos</a> |
                 <a href="racoes.html">Rações</a> |
                 <a href="acessorios.html">Acessórios</a> |
                 <a href="servicos.html">Serviços</a> |
                 <a href="#contato">Contato</a>
             </nav>
-        </header>
-    <section id="servicos">
-        <h3>Serviços</h3>
-        <div>
-            <img src="banho.png" alt="Banho e Tosa" width="150">
-            <p>Banho e Tosa (sem tele-busca) - R$ 79,90</p>
+    </div>
+  </footer>
+
+<!-- Modal de Agendamento -->
+<div class="modal fade" id="agendamentoModal" tabindex="-1" aria-labelledby="agendamentoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="formAgendamento" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="agendamentoModalLabel">Agendamento — Banho & Tosa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
-        <div>
-            <img src="carro.png" alt="Banho e Tosa com tele-busca" width="150">
-            <p>Banho e Tosa (com tele-busca) - R$ 99,90</p>
+
+        <div class="modal-body">
+
+          <!-- Campo cliente (nome) -->
+          <div class="mb-2">
+            <label for="agNome" class="form-label">Nome do cliente</label>
+            <input type="text" id="agNome" class="form-control" placeholder="Nome completo" required>
+            <div class="invalid-feedback">Informe seu nome.</div>
+          </div>
+
+          <!-- Tipo de serviço -->
+          <div class="mb-3">
+            <label class="form-label">Serviço</label>
+            <select id="agServico" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Banho e Tosa sem Tele-busca">Banho e Tosa</option>
+            </select>
+            <div class="invalid-feedback">Escolha uma opção.</div>
+          </div>
+
+          <!-- Modalidade -->
+          <div class="mb-2">
+            <label class="form-label">Modalidade</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="modalidade" id="modPresencial" value="presencial" required>
+                <label class="form-check-label" for="modPresencial">Entrega no local</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="modalidade" id="modTele" value="tele-busca" required>
+                <label class="form-check-label" for="modTele">Tele-busca</label>
+              </div>
+            </div>
+            <div class="invalid-feedback d-block" id="modalidadeFeedback">Escolha a modalidade.</div>
+          </div>
+
+          <!-- Data e hora -->
+          <div class="mb-2">
+            <label for="agData" class="form-label">Data</label>
+            <input type="date" id="agData" class="form-control" required>
+            <div class="invalid-feedback">Escolha uma data.</div>
+          </div>
+
+          <div class="mb-2">
+            <label for="agHora" class="form-label">Horário</label>
+            <input type="time" id="agHora" class="form-control" required>
+            <div class="invalid-feedback">Escolha um horário.</div>
+          </div>
+
+          <!-- Forma de Pagamento -->
+          <div class="mb-3">
+            <label class="form-label">Forma de Pagamento</label>
+            <select id="agPagamento" class="form-select" required>
+              <option value="">Selecione...</option>
+              <option value="Pix">Pix</option>
+              <option value="Cartão de crédito">Cartão de crédito</option>
+              <option value="Cartão de débito">Cartão de débito</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Transferência bancária">Transferência bancária</option>
+            </select>
+            <div class="invalid-feedback">Escolha a forma de pagamento.</div>
+          </div>
+
+          <!-- Observações -->
+          <div class="mb-2">
+            <label for="agObserv" class="form-label">Observações</label>
+            <textarea id="agObserv" class="form-control" rows="2" placeholder="Ex.: porte do pet, acesso, etc."></textarea>
+          </div>
+
         </div>
-    </section>
-    <section id="contato">
-        <h3>Contato</h3>
-        <p>Telefone: (51) 1234-5678</p>
-    </section>  
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
-<footer>
-    <p>&copy; 2025 PETISCAO Petshop. Todos os direitos reservados.</p>
-    <p>Contato: (51) 1234-5678 | email:petiscao@pet.com</p>
-         <nav>
-                <a href="produtos.html">Produtos</a> |
-                <a href="racoes.html">Rações</a> |
-                <a href="acessorios.html">Acessórios</a> |
-                <a href="servicos.html">Serviços</a> |
-                <a href="#contato">Contato</a>
-            </nav>
-</footer>
 </html>

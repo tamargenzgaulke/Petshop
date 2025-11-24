@@ -1,51 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>PETISCAO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Petiscão — Produtos</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Projeto CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <header>
-            <h1>PETISCÃO <a href="petshop.html">Petshop</a> </h1>
-            <div>Cuidados e produtos para o seu melhor amigo!</div>
-            <div id="banner">
-              <img src="Dog.png" width="15%" alt="PETISCÃO Petshop">
-            </div>
-            <nav>
-                <a href="produtos.html">Produtos</a> |
-                <a href="racoes.html">Rações</a> |
-                <a href="acessorios.html">Acessórios</a> |
-                <a href="servicos.html">Serviços</a> |
-                <a href="#contato">Contato</a>
-            </nav>
-        </header>
+  <header class="site-header bg-light">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <div class="d-flex align-items-center">
+        <img src="Dog.png" alt="Logomarca Petiscão" width="56" height="56" class="me-2">
+        <div>
+          <h1 class="h4 mb-0">Petiscão</h1>
+          <div class="small text-muted">Produtos</div>
+        </div>
+      </div>
+      <!-- Barra de navegação -->
+
+      <nav aria-label="Navegação">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="produtos.html">Produtos</a></li>
+          <li class="nav-item"><a class="nav-link" href="racoes.html">Rações</a></li>
+          <li class="nav-item"><a class="nav-link" href="acessorios.html">Acessórios</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+        </ul>
+      </nav>
     </div>
-    <section id="produtos de higiene e limpeza"></section>
-        <h3>Produtos de Higiene e Limpeza</h3>
-        <div>
-            <img src="tapete.png" alt="Tapete Higiênico" width="150">
-            <p>Tapete Higiênico - R$ 29,90</p>
+  </header>
+<!-- Opções de compra em produtos -->
+  <main class="container my-4">
+    <h2 class="h5">Produtos de Higiene e Limpeza</h2>
+
+    <div class="row g-3 mt-2">
+      <article class="col-12 col-md-3">
+        <div class="card">
+          <img src="tapete.png" class="card-img-top" alt="Tapete higiênico para cães" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Tapete Higiênico</h3>
+            <p class="card-text">Alta absorção e neutralização de odores.</p>
+            <p class="fw-bold">R$ 29,90</p>
+          </div>
         </div>
-        <div>
-            <img src="fralda.png" alt="Fraldas para Pets" width="150">
-            <p>Fraldas para Pets - R$ 39,90</p>
+      </article>
+
+      <article class="col-12 col-md-3">
+        <div class="card">
+          <img src="fralda.png" class="card-img-top" alt="Fraldas para pets" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Fraldas para Pets</h3>
+            <p class="card-text">Confortáveis e seguras para uso diário.</p>
+            <p class="fw-bold">R$ 39,90</p>
+          </div>
         </div>
-        <div>
-            <img src="shampoo.png" alt="Shampoo para Pets" width="150">
-            <p>Shampoo para Pets - R$ 24,90</p> 
+      </article>
+
+      <article class="col-12 col-md-3">
+        <div class="card">
+          <img src="shampoo.png" class="card-img-top" alt="Shampoo neutro para pets" />
+          <div class="card-body">
+            <h3 class="h6 card-title">Shampoo Neutro 500ml</h3>
+            <p class="card-text">Perfumação suave; ideal para pelagem sensível.</p>
+            <p class="fw-bold">R$ 24,90</p>
+          </div>
         </div>
-    </section>
-    </body>
-<footer>
-    <p>&copy; 2025 PETISCAO Petshop. Todos os direitos reservados.</p>
-    <p>Contato: (51) 1234-5678 | email:petiscao@pet.com</p>
-         <nav>
+      </article>
+    </div>
+  </main>
+  <!-- Rodapé -->
+<footer class="site-footer bg-light mt-5 py-3">
+    <div class="container text-center small">
+      <p class="mb-1">© 2025 Petiscão — Desenvolvido por Tamar Genz Gaulke</p>
+      <p class="mb-0">Contato: (51) 1234-5678 • petiscao@pet.com</p>
+        <nav>
                 <a href="produtos.html">Produtos</a> |
                 <a href="racoes.html">Rações</a> |
                 <a href="acessorios.html">Acessórios</a> |
                 <a href="servicos.html">Serviços</a> |
                 <a href="#contato">Contato</a>
             </nav>
+    </div>
 </footer>
 </html>
