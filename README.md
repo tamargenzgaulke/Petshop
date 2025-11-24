@@ -19,5 +19,6 @@ Objetivos Específicos
 3. Exibir ao menos dois produtos de cada categoria obrigatória (Acessórios, Rações e Produtos de Higiene).  
 4. Descrever os serviços oferecidos (Banho e Tosa, com e sem tele-busca).
 5. Disponibilizar formulário de cadastro do cliente e do pet.
-6. Disponibilizar formulário de solicitação de serviços incluindo formas de pagamento.  
-7. Publicar o site no **GitHub Pages** com links funcionais.  
+6. Disponibilizar formulário de solicitação de serviços incluindo formas de pagamento.
+7. Adaptar o sistema web do petshop para a audiodescrição de imagens.
+8. Publicar o site no **GitHub Pages** com links funcionais.  
